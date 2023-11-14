@@ -1,5 +1,5 @@
-import 'package:fit_life/splash.dart';
-import 'package:fit_life/src/ScreensPages/widgets/Loader.dart';
+import 'package:fit_life/src/feature/Home/View/Homepage.dart';
+import 'package:fit_life/src/feature/ScreensPages/widgets/Loader.dart';
 import 'package:fit_life/src/res/image_assets.dart';
 import 'package:flutter/material.dart';
 

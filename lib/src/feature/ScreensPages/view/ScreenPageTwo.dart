@@ -1,5 +1,5 @@
-import 'package:fit_life/src/ScreensPages/view/ScreenPageTree.dart';
-import 'package:fit_life/src/ScreensPages/widgets/Loader.dart';
+import 'package:fit_life/src/feature/ScreensPages/view/ScreenPageTree.dart';
+import 'package:fit_life/src/feature/ScreensPages/widgets/Loader.dart';
 import 'package:fit_life/src/res/image_assets.dart';
 import 'package:flutter/material.dart';
 
