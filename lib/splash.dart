@@ -1,4 +1,5 @@
 import 'package:fit_life/src/feature/ScreensPages/view/ScreenPageOne.dart';
+import 'package:fit_life/src/res/color_Pallet.dart';
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -12,7 +13,7 @@ class SplashScreenPage extends StatefulWidget {
 
 class _SplashScreenPageState extends State<SplashScreenPage> {
   Color _backgroundColor = Colors.white; // Initial background color
-  Color _fontcolor = const Color(0xff92A3FD);
+  Color _fontcolor = ColorsPallet.backgroundcolor;
   Timer? _timer;
 
   @override
@@ -22,11 +23,11 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
       // Change background color every second
       setState(() {
         _backgroundColor = _backgroundColor == Colors.white
-            ? const Color(0xff92A3FD)
+            ? ColorsPallet.backgroundcolor
             : Colors.white;
-        _fontcolor = _fontcolor == const Color(0xff92A3FD)
+        _fontcolor = _fontcolor == ColorsPallet.backgroundcolor
             ? Colors.white
-            : const Color(0xff92A3FD);
+            : ColorsPallet.backgroundcolor;
       });
     });
 
