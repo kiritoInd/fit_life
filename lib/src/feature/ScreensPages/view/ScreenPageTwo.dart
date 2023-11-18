@@ -1,4 +1,4 @@
-import 'package:fit_life/src/feature/Home/View/Homepage.dart';
+import 'package:fit_life/src/feature/Login/View/login.dart';
 import 'package:fit_life/src/feature/ScreensPages/widgets/Loader.dart';
 import 'package:fit_life/src/res/image_assets.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +17,7 @@ class ScreenTwo extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => HomePage(),
+            builder: (context) => LoginPage(),
           ),
         );
       },
