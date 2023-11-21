@@ -1,3 +1,4 @@
+import 'package:fit_life/src/feature/Home/View/Home.dart';
 import 'package:fit_life/src/feature/Login/Widgets/round_button.dart';
 import 'package:fit_life/src/res/image_assets.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,7 @@ class WelcomePage extends StatelessWidget {
               height: media.width * 0.08,
             ),
             Text(
-              "Welcome",
+              "Welcome Challenger",
               style: GoogleFonts.poppins(
                 fontSize: 20,
                 fontWeight: FontWeight.w700,
@@ -45,8 +46,8 @@ class WelcomePage extends StatelessWidget {
             RoundButton(
                 title: "Go to Home",
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HomePage()));
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => Home()));
                 }),
             SizedBox(
               height: 30,

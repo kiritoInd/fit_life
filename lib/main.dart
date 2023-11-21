@@ -1,4 +1,5 @@
 import 'package:fit_life/splash.dart';
+import 'package:fit_life/src/feature/Home/View/Home.dart';
 import 'package:fit_life/src/feature/Home/View/Homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
           fontFamily: GoogleFonts.poppins().fontFamily,
         ),
-        home: HomePage() // SplashScreenPage(),
+        home: SplashScreenPage() // SplashScreenPage(),
         );
   }
 }

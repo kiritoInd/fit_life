@@ -11,4 +11,12 @@ class ImageAssets {
   static const menu = "$base/Menu.png";
   static const workout_img = "$base/w1.png";
   static const clock = "$base/clock.png";
+
+  static const hbg1 = "$base/bg1.png";
+  static const hbg2 = "$base/bg2.png";
+
+  static const svl1 = "$base/l1.svg";
+  static const svl2 = "$base/l2.svg";
+  static const svl3 = "$base/l3.svg";
+  static const svl4 = "$base/l4.svg";
 }
