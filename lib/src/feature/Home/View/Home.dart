@@ -1,5 +1,6 @@
+import 'package:fit_life/src/feature/Exersices/views/ExercisesPage.dart';
 import 'package:fit_life/src/feature/Home/View/Homepage.dart';
-import 'package:fit_life/src/feature/Home/View/widgets/NavbarBottom.dart';
+import 'package:fit_life/src/feature/Home/widgets/NavbarBottom.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -18,6 +19,7 @@ class _HomeState extends State<Home> {
     super.initState();
     _pages = [
       HomePage(),
+      ExercisePage(),
     ];
   }
 

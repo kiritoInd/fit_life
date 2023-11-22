@@ -1,6 +1,6 @@
-import 'package:fit_life/src/feature/Home/View/widgets/CustomExTiles.dart';
-import 'package:fit_life/src/feature/Home/View/widgets/HomeTopInfo.dart';
-import 'package:fit_life/src/feature/Home/View/widgets/MainAppbar.dart';
+import 'package:fit_life/src/feature/Home/widgets/CustomExTiles.dart';
+import 'package:fit_life/src/feature/Home/widgets/HomeTopInfo.dart';
+import 'package:fit_life/src/feature/Home/widgets/MainAppbar.dart';
 import 'package:fit_life/src/res/image_assets.dart';
 import 'package:flutter/material.dart';
 
@@ -24,29 +24,29 @@ class HomePage extends StatelessWidget {
                   backgroundImage: ImageAssets.hbg1,
                   title: 'FULL BODY',
                   subtitle: '7x4 Challenge',
-                  completionPercentage: 0.7,
-                  daysLeft: 5,
+                  completionPercentage: 0.0,
+                  daysLeft: 30,
                 ),
                 CustomListItem(
                   backgroundImage: ImageAssets.hbg2,
                   title: 'LOWER BODY',
                   subtitle: '7x4 Challenge',
-                  completionPercentage: 0.5,
-                  daysLeft: 10,
+                  completionPercentage: 0.0,
+                  daysLeft: 30,
                 ),
                 CustomListItem(
                   backgroundImage: ImageAssets.hbg2,
                   title: 'UPPER BODY',
                   subtitle: '7x4 Challenge',
-                  completionPercentage: 0.5,
-                  daysLeft: 10,
+                  completionPercentage: 0.0,
+                  daysLeft: 30,
                 ),
                 CustomListItem(
                   backgroundImage: ImageAssets.hbg2,
                   title: 'CORE',
                   subtitle: '7x4 Challenge',
-                  completionPercentage: 0.5,
-                  daysLeft: 10,
+                  completionPercentage: 0.0,
+                  daysLeft: 30,
                 ),
               ],
             ),

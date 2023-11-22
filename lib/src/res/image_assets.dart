@@ -19,4 +19,6 @@ class ImageAssets {
   static const svl2 = "$base/l2.svg";
   static const svl3 = "$base/l3.svg";
   static const svl4 = "$base/l4.svg";
+
+  static const wr1 = "$base/wr1.png";
 }

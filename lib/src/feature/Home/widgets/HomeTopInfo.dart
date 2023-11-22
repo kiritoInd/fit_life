@@ -1,4 +1,4 @@
-import 'package:fit_life/src/feature/Home/View/widgets/CounterWorkoutClock.dart';
+import 'package:fit_life/src/feature/Home/widgets/CounterWorkoutClock.dart';
 
 import 'package:fit_life/src/res/color_Pallet.dart';
 import 'package:fit_life/src/res/image_assets.dart';
