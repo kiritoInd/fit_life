@@ -3,9 +3,12 @@ import 'package:fit_life/src/feature/Home/View/Home.dart';
 import 'package:fit_life/src/feature/Home/View/Homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences.getInstance();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {

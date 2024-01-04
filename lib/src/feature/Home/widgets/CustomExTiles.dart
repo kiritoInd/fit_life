@@ -71,7 +71,7 @@ class _CustomListItemState extends State<CustomListItem> {
                 children: [
                   Text(
                     widget.title,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 20.0,
                       fontWeight: FontWeight.bold,
@@ -141,48 +141,67 @@ class _CustomListItemState extends State<CustomListItem> {
     showDialog(
       context: context,
       builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text(
-            "Start 30-day Workout?",
-            style: TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          content: Text("Do you want to start this 30-day workout session?"),
-          actions: [
-            TextButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              child: Text(
-                "Cancel",
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                ),
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              width: 300,
+              height: 150,
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 255, 255, 255),
+                borderRadius: BorderRadius.circular(10),
               ),
-            ),
-            TextButton(
-              onPressed: () {
-                setState(() {
-                  _isStarted = true;
-                  Navigator.of(context).pop();
-                });
-                // Navigate to the new page after starting the workout.
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ProgramPage(),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  const Text(
+                    "Start 30-day Workout?",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                );
-              },
-              child: Text(
-                "Start",
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      TextButton(
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                        child: const Text(
+                          "Cancel",
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: () {
+                          setState(() {
+                            _isStarted = true;
+                            Navigator.of(context).pop();
+                          });
+                          // Navigate to the new page after starting the workout.
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const ProgramPage(),
+                            ),
+                          );
+                        },
+                        child: const Text(
+                          "Start",
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  )
+                ],
               ),
             ),
           ],
@@ -191,3 +210,16 @@ class _CustomListItemState extends State<CustomListItem> {
     );
   }
 }
+
+
+        // title: Text(
+        //     "Start 30-day Workout?",
+        //     style: TextStyle(
+        //       fontSize: 15,
+        //       fontWeight: FontWeight.bold,
+        //     ),
+        //   ),
+        //   content: Text("Do you want to start this 30-day workout session?"),
+        //   actions: [
+        //     
+        //   ],

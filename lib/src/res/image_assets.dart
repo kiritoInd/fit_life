@@ -21,4 +21,11 @@ class ImageAssets {
   static const svl4 = "$base/l4.svg";
 
   static const wr1 = "$base/wr1.png";
+  static const wr2 = "$base/push-up.png";
+  static const wr3 = "$base/wr3.png";
+  static const wr4 = "$base/wr4.png";
+  static const wr5 = "$base/wr5.png";
+  static const wr6 = "$base/wr6.png";
+  static const wr7 = "$base/wr7.png";
+  static const wr8 = "$base/wr8.png";
 }

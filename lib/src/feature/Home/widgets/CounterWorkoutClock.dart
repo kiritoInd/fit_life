@@ -1,42 +1,56 @@
-import 'package:fit_life/src/res/color_Pallet.dart';
-import 'package:fit_life/src/res/image_assets.dart';
+import 'package:fit_life/src/feature/Home/widgets/shared_pref_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-class CounterWorkoutClock extends StatelessWidget {
+class CounterWorkoutClock extends StatefulWidget {
   final String title;
   final String count;
   final String imagePath;
 
   const CounterWorkoutClock({
-    Key? key,
     required this.title,
     required this.count,
     required this.imagePath,
-  }) : super(key: key);
+  });
+
+  @override
+  _CounterWorkoutClockState createState() => _CounterWorkoutClockState();
+}
+
+class _CounterWorkoutClockState extends State<CounterWorkoutClock> {
+  int count = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    getCounter();
+  }
+
+  Future<void> getCounter() async {
+    count = await SharedPreferenceUtil().getWorkoutCounter();
+    setState(() {});
+  }
+
+  Future<void> incrementCounter() async {
+    await SharedPreferenceUtil().incrementWorkoutCounter();
+    getCounter();
+  }
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-
     return Container(
-      width: 145,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Image.asset(
-            imagePath,
-            width: 37,
-            height: 40,
-            fit: BoxFit.fitWidth,
+          Image.asset(widget.imagePath, height: 30, width: 30)
+              .pOnly(left: 10, right: 30),
+          (widget.title).text.xl.white.bold.size(20).make(),
+          TextButton(
+            onPressed: () {
+              incrementCounter();
+            },
+            child: (count.toString()).text.white.white.xl.size(18).bold.make(),
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              title.text.sm.bold.color(ColorsPallet.textWhiteColor).make(),
-              count.text.bold.color(ColorsPallet.textWhiteColor).make(),
-            ],
-          )
         ],
       ),
     );

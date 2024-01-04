@@ -27,13 +27,8 @@ class HomeTopInfo extends StatelessWidget {
                 children: [
                   CounterWorkoutClock(
                     title: 'Total Workouts',
-                    count: '34',
+                    count: '0',
                     imagePath: ImageAssets.workout_img,
-                  ),
-                  CounterWorkoutClock(
-                    title: 'Total Minutes',
-                    count: '10',
-                    imagePath: ImageAssets.clock,
                   ),
                 ],
               ),
